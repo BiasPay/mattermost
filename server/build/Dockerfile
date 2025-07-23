@@ -68,7 +68,7 @@ COPY --from=builder /usr/lib/libfontconfig.so* /usr/lib/
 COPY --from=builder --chown=2000:2000 /mattermost /mattermost
 
 # Copy passwd including mattermost user
-# COPY  passwd /etc/passwd
+COPY  passwd /etc/passwd
 
 # We should refrain from running as privileged user
 USER mattermost
